@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Maqueen BLE</title>
+<meta http-equiv="x-ua-compatible" content="IE=Edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<script src="maqueen/maqueen.js" type="text/javascript"></script>
+<script src="maqueen/notify.js" type="text/javascript"></script>
+<script src="maqueen/sound.js" type="text/javascript"></script>
+<script src="maqueen/microbit.js" type="text/javascript"></script>
+<script src="maqueen/ui.js" type="text/javascript"></script>
+<link href="maqueen/ui.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+
+<div id=pages>
+<div id=page>
+
+<div id=left>
+<div id=keys>
+<div id=sound></div>
+</div>
+<div id=play>
+<button onclick="device_play(this)">チューリップ</button>
+<button onclick="device_play(this)">どんぐりころころ</button>
+<button onclick="device_play(this)">静かな湖畔</button>
+</div>
+</div>
+
+<div id=maqueen>
+<div style="position:relative;margin-top:20px;">
+<img src=maqueen/maqueen.png>
+<img id=img_sonic src=maqueen/sonic.png>
+<img id=img_led_left0 src=maqueen/led0.png>
+<img id=img_led_left1 src=maqueen/led1.png>
+<img id=img_led_right0 src=maqueen/led0.png>
+<img id=img_led_right1 src=maqueen/led1.png>
+<img id=img_tire_left1 src=maqueen/tire1.png>
+<img id=img_tire_left2 src=maqueen/tire2.png>
+<img id=img_tire_right1 src=maqueen/tire1.png>
+<img id=img_tire_right2 src=maqueen/tire2.png>
+<div class=button id=button_forward><img src=maqueen/arrow0.png></div>
+<div class=button id=button_turn_right><img src=maqueen/arrow3.png></div>
+<div class=button id=button_backward><img src=maqueen/arrow6.png></div>
+<div class=button id=button_turn_left><img src=maqueen/arrow9.png></div>
+<div class=button id=button_led_right onclick="device_led(this)"></div>
+<div class=button id=button_led_left onclick="device_led(this)"></div>
+</div>
+<div class=circle id=sensor_left2></div>
+<div class=circle id=sensor_right2></div>
+<div id=sonic0 nowrap><span class=degit id=sonic2>0</span> cm</div>
+<div class=degit id=mortor_left2>0</div>
+<div class=degit id=mortor_right2>0</div>
+<div id=logo1>micro:Maqueen<br><small>ROB0148-EN</small></div>
+<div id=logo2>for Micro:bit<br><small>by BLE</small></div>
+</div>
+
+<div id=right style="padding-left:10px;width:330px;">
+<table id=state>
+<tr>
+<td class=c1 nowrap>ライン:</td>
+	<td class=v1 nowrap><span class=circle id=sensor_left></span>
+	<span class=circle id=sensor_right></span></td>
+<td class=c2 nowrap>距離:</td>
+	<td class=v2 nowrap><span class=degit id=sonic>0</span> cm</td>
+</tr><tr>
+<td class=c1 nowrap>LED:</td>
+	<td class=v1 nowrap><span class=circle id=led_left></span>
+	<span class=circle id=led_right></span></td>
+<td class=c2 nowrap>モーター:</td>
+	<td class=v2 nowrap>
+	<span class=degit id=mortor_left>0</span>
+	<span class=degit id=mortor_right>0</span> /
+	<span class=degit id=mortor_speed>0</span></td>
+</tr>
+</table>
+
+<div style="position:relative;width:320px;">
+<div id=logx>
+<div id=log></div>
+</div>
+<span id=cls onclick="device_cls()">×</span>
+</div>
+<div><input id=in type="text"></div>
+<div style="margin-top:5px; position:relative;width:320px;">
+	<button id=conn onclick="device_connect()">接続</button>
+	<button onclick="device_send()">命令</button>
+	<button onclick="device_speed(5)">速く</button>
+	<button onclick="device_speed(-5)">遅く</button>
+	<button id=auto onclick="device_auto()">自動</button>
+</div>
+</div>
+
+<div class=prev onclick="device_prev()"></div>
+<div class=next onclick="device_next()"></div>
+</div>
+
+</div>
+</body>
+</html>

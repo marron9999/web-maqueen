@@ -1,0 +1,340 @@
+body {
+	font-family: "Meiryo UI";
+	font-size: 14px;
+	padding: 5px 0px;
+}
+
+#pages {
+	overflow: hidden;
+	width:1040px;
+	height:380px;
+	display: inline-block;
+	/*border: 1px solid #ddd;*/
+}
+@media screen and (max-width: 1040px) {
+	#pages {
+		width:700px;
+	}
+	#page {
+		margin-left: -340px;
+	}
+}
+@media screen and (max-width: 720px) {
+	#pages {
+		width:360px;
+	}
+	#page {
+		margin-left: -340px;
+	}
+}
+#page {
+	white-space: nowrap;
+	width:1040px;
+	height:380px;
+	padding-left: 10px;
+	padding-right: 10px;
+	position: relative;
+}
+
+#maqueen, #left, #right {
+	width: 340px;
+	height: 380px;
+	display: inline-block;
+	float: left;
+	position: relative;
+	overflow: hidden;
+}
+#maqueen, #right {
+	padding-top: 5px;
+	height: 375px;
+}
+.prev {
+	width: 20px;
+	height: 380px;
+	top: 0;
+	left:340px;
+	position: absolute;
+	z-index: 2;
+	user-select: none;
+}
+.next {
+	width: 20px;
+	height: 380px;
+	top: 0;
+	left:680px;
+	position: absolute;
+	z-index: 2;
+	user-select: none;
+}
+
+table, table td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+button {
+	margin-right: 10px;
+	user-select: none;
+	padding: 0 5px;
+}
+
+#state td.c2 {
+	padding-left: 20px;
+}
+
+.degit {
+	width: 32px;
+	text-align: right;
+	display: inline-block;
+}
+
+#in {
+	width: 312px;
+}
+
+#logx {
+	margin-top: 5px;
+	margin-bottom: 10px;
+	vertical-align: top;
+	padding: 5px 5px;
+	background: #eee;
+	height: 205px;
+	overflow-y: auto;
+	width: 310px;
+	word-break: break-all;
+	font-size: 10px;
+}
+#cls {
+	position: absolute;
+	display: inline-block;
+	top: 0px;
+	left: 15px;
+	z-index: 10;
+	font-weight: bold;
+	font-size: 18px;
+	cursor: pointer; 
+	user-select: none;
+}
+
+.circle {
+	border: 1px solid gray;
+	border-radius: 8px;
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	background: white;
+}
+
+#sound {
+	white-space: nowrap;
+	padding: 10px 10px;
+	overflow: hidden;
+	widith: 320px; 
+}
+.sound {
+	width: 42px;
+	height: 42px;
+	text-align: center;
+	border: 1px solid green;
+	border-radius: 2px;
+	z-index: 10;
+	cursor: pointer;
+	display: inline-block;
+	margin-right: 1px;
+	text-align: center;
+	color: green;
+	user-select: none;
+	position: relative;
+}
+.sound.null {
+	border-color: white;
+	cursor: unset;
+}
+.sound b {
+	font-weight: bold;
+	vertical-align: bottom;
+	position: absolute;
+	left: 0;
+	top: 6px;
+	width: 32px;
+}
+.sound1 .sound {
+	background: #ccc;
+}
+.sound1 .sound.null {
+	background: transparent;
+}
+.sound2 .sound b {
+	font-size: 16px;
+}
+.sound1 .sound b {
+	font-size: 16px;
+}
+.sound1 {
+	margin-left: 21px;	
+}
+.sound2 {
+	margin-bottom: 10px;	
+}
+
+.button {
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	text-align: center;
+	border: 2px solid #0f0;
+	border-radius: 10px;
+	z-index: 10;
+	cursor: pointer;
+	user-select: none;
+}
+.button img {
+	margin-top: 10px;
+}
+#button_forward {
+	left: 128px;
+	bottom: 130px;
+}
+#button_backward {
+	left: 128px;
+	bottom: 30px;
+}
+#button_turn_right {
+	right: 40px;
+	bottom: 90px;
+}
+#button_turn_left {
+	left: 40px;
+	bottom: 90px;
+}
+#button_led_right {
+	right: 54px;
+	top: 0px;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+}
+#button_led_left {
+	left: 58px;
+	top: 0px;
+	border-radius: 50%;
+	width: 70px;
+	height: 70px;
+}
+
+#img_tire_left1,
+#img_tire_left2 {
+	visibility: hidden;
+	position: absolute;
+	z-index: 5;
+	bottom: 15px;
+	left: 20px;
+	display:disp 
+}
+#img_tire_right1,
+#img_tire_right2 {
+	visibility: hidden;
+	position: absolute;
+	z-index: 5;
+	bottom: 15px;
+	right: 20px;
+}
+#img_led_left0,
+#img_led_left1 {
+	position: absolute;
+	z-index: 5;
+	top: 19px;
+	left: 87px;
+}
+#img_led_right0,
+#img_led_right1 {
+	position: absolute;
+	z-index: 5;
+	top: 19px;
+	right: 86px;
+}
+#img_led_left1,
+#img_led_right1 {
+	visibility: hidden;
+}
+
+#img_sonic {
+	position: absolute;
+	top: 53px;
+	left: 95px;
+	width: 45%;
+}
+
+#sensor_left2 {
+	position: absolute;
+	top: 10px;
+	left: 135px;
+}
+#sensor_right2 {
+	position: absolute;
+	top: 10px;
+	right: 135px;
+}
+#sonic0 {
+	position: absolute;
+	top: 102px;
+	left: 133px;
+	width: 70px;
+	text-align: center;
+	border: 1px solid gray;
+	display: inline-block;
+	background: white;
+	padding: 0px 2px 1px 2px;
+	z-index:2;	
+}
+#mortor_left2 {
+	position: absolute;
+	bottom: 15px;
+	left: 15px;
+}
+#mortor_right2 {
+	position: absolute;
+	bottom: 15px;
+	right: 25px;
+}
+
+.connect {
+	background: rgba(0,255,0,0.1);	
+}
+.auto {
+	background: rgba(0,255,255,0.1);	
+}
+
+#auto {
+	position: absolute;
+	margin-right: 0px;
+	right: 0;
+}
+
+#logo1 {
+	position: absolute;
+	left:10px;
+	top: 0px;
+	font-weight: bold;
+	font-size: 13px;
+	display: inline-block;
+	color: #008;
+}
+#logo2 {
+	position: absolute;
+	right:10px;
+	top: 0px;
+	font-weight: bold;
+	font-size: 13px;
+	display: inline-block;
+	text-align:right;
+	color: #008;
+}
+#logo1 small {
+	font-size: 9px;
+	font-weight: normal;
+}
+#logo2 small {
+	font-size: 13px;
+	font-weight: bold;
+}
